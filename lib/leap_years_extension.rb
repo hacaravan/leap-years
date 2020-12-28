@@ -9,5 +9,5 @@ def leap_years_between(min_year, max_year)
 end
 
 def nearest_leap_year(year)
-  year
+  leap_year(year) ? year : year + 1
 end
