@@ -13,4 +13,10 @@ describe 'leap_years_between' do
   it 'switches the min and max years around if they are given the wrong way round' do
     expect(leap_years_between(2023, 2019)).to eq [2020]
   end
+  it 'does not return years that are multiples of 100 but not 400' do
+    expect(leap_years_between(2099, 2101)).to eq []
+  end
+  it 'returns years that are multiples of 400' do
+    expect(leap_years_between(1999, 2001)).to eq [2000]
+  end
 end
