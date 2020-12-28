@@ -10,4 +10,7 @@ describe 'leap_years_between' do
   it 'includes leap years on either side of the window' do
     expect(leap_years_between(2020, 2024)).to eq [2020, 2024]
   end
+  it 'switches the min and max years around if they are given the wrong way round' do
+    expect(leap_years_between(2023, 2019)).to eq [2020]
+  end
 end
