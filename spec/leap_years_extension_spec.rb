@@ -19,6 +19,7 @@ describe 'leap_years_between' do
   it 'returns years that are multiples of 400' do
     expect(leap_years_between(1999, 2001)).to eq [2000]
   end
+end
 
 describe 'nearest_leap_year' do
   it 'returns the year if fed a leap year' do
@@ -27,5 +28,7 @@ describe 'nearest_leap_year' do
   it 'returns the subsequent year if fed one less than a leap year' do
     expect(nearest_leap_year(2019)).to eq 2020
   end
-end
+  it 'returns the preceding year if fed one more than a leap year' do
+    expect(nearest_leap_year(2021)).to eq 2020
+  end
 end
