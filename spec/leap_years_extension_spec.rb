@@ -31,4 +31,7 @@ describe 'nearest_leap_year' do
   it 'returns the preceding year if fed one more than a leap year' do
     expect(nearest_leap_year(2021)).to eq 2020
   end
+  it 'returns the next leap year (as default, rather than previous) if two less than a leap year' do
+    expect(nearest_leap_year(2018)).to eq 2018
+  end
 end
