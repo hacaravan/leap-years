@@ -34,4 +34,7 @@ describe 'nearest_leap_year' do
   it 'returns the next leap year (as default, rather than previous) if two less than a leap year' do
     expect(nearest_leap_year(2018)).to eq 2020
   end
+  it 'returns the next leap year (four years ahead, rather than previous) if passed a multiple of 100 but not 400' do
+    expect(nearest_leap_year(1900)).to eq 1904
+  end
 end
