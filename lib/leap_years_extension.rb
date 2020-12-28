@@ -12,4 +12,5 @@ def nearest_leap_year(year)
   return year if leap_year(year)
   return year + 1 if leap_year(year + 1)
   return year -1 if leap_year(year - 1)
+  return year + 2 if leap_year(year + 2)
 end
