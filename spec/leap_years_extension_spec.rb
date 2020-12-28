@@ -7,4 +7,7 @@ describe 'leap_years_between' do
   it 'returns a single valued array for a simple period around a leap year' do
     expect(leap_years_between(2019, 2021)).to eq [2020]
   end
+  it 'includes leap years on either side of the window' do
+    expect(leap_years_between(2020, 2024)).to eq [2020, 2024]
+  end
 end
