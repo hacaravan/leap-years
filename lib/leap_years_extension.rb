@@ -4,5 +4,6 @@ def leap_year(year)
 end
 
 def leap_years_between(min_year, max_year)
+  min_year, max_year = [min_year, max_year].minmax
   (min_year..max_year).to_a.select { |year| leap_year(year) }
 end
