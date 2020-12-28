@@ -9,6 +9,9 @@ def leap_years_between(min_year, max_year)
 end
 
 def nearest_leap_year(year)
-  checking_order = [0, 1, -1, 2, 4, -3, 3, -2]
-  checking_order.each { |offset| return year + offset if leap_year(year + offset) }
+  checking_order = (0..4).to_a
+  checking_order.each do |offset|
+    return year + offset if leap_year(year + offset)
+    return year - offset if leap_year(year - offset)
+  end
 end
