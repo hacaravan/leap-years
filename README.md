@@ -8,7 +8,7 @@ A simple tool that will tell you whether a year is a leap year, according to the
    - All years not divisible by 4 are NOT leap years (e.g. 2009, 2010 and 2011 were not leap years)
 
 ## Example output
-
+```
 2.4.1 :001 > require './lib/leap_years.rb'
  => true
 2.4.1 :002 > leap_year?(2000)
@@ -21,6 +21,7 @@ A simple tool that will tell you whether a year is a leap year, according to the
  => true
 2.4.1 :006 > leap_year(1500)
  => false
+ ```
 
 ## Extension Options
 
