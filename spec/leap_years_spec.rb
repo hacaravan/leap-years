@@ -10,4 +10,7 @@ describe 'leap_years' do
   it 'returns true when a year divisible by 4 but not by 100 is passed' do
     expect(leap_year(2020)).to eq true
   end
+  it 'returns false when a year not divisible by 4 is passed' do
+    expect(leap_year(2021)).to eq false
+  end
 end
