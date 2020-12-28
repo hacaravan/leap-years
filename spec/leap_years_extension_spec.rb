@@ -40,4 +40,7 @@ describe 'nearest_leap_year' do
   it 'returns the previous leap year if three more than a leap year and the next year is not a leap year' do
     expect(nearest_leap_year(1899)).to eq 1896
   end
+  it 'returns the subsequent leap year if one more than multiple of 4 year that is not a leap year' do
+    expect(nearest_leap_year(1901)).to eq 1904
+  end
 end
